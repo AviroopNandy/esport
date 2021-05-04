@@ -1,0 +1,20 @@
+.navbar-custom {
+    padding: 1% 5%;
+    background: #F8F9FA;
+}
+
+.navbar-logo {
+    color: #000000;
+    font-size: 20px;
+    margin-right: 5%;
+}
+
+.navbar-logo>img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10%;
+}
+
+.navbar-logo:hover {
+    color: #000000;
+}
