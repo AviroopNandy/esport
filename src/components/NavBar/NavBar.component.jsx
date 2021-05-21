@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
 import logo from "../../assets/logo.png";
 
-import "./NavBar.component.css";
+import "./NavBar.style.css";
 
 const NavBar = () => {
     return(
@@ -16,9 +16,10 @@ const NavBar = () => {
                     {/* <h3 className="navbar-brand-text">ESPORTS</h3> */}
                 </Navbar.Brand>
                 <Nav className="mr-auto">
-                <Nav.Link href="#home" className="nav-link-text">Home</Nav.Link>
-                <Nav.Link href="#features" className="nav-link-text">Stats</Nav.Link>
-                <Nav.Link href="#pricing" className="nav-link-text">How It Works</Nav.Link>
+                <Nav.Link href="#" className="nav-link-text">Home</Nav.Link>
+                <Nav.Link href="#" className="nav-link-text">Stats</Nav.Link>
+                <Nav.Link href="#" className="nav-link-text">How It Works</Nav.Link>
+                <Nav.Link href="#" className="nav-link-text">Devs</Nav.Link>
                 </Nav>
                 <Button variant="primary">Play Now</Button>
             </Navbar>
