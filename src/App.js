@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Landing from "./components/Landing/Landing.component";
 import Play from "./components/Play/Play.component";
+import Devs from "./components/Devs/Devs.component";
 
 import "./App.css";
 
@@ -11,6 +12,7 @@ const App = () => {
             <Switch>
                 <Route path="/" exact component={ Landing } />
                 <Route path="/play" component={ Play } />
+                <Route path="/devs" component={ Devs } />
             </Switch>
         </React.Fragment>
     );

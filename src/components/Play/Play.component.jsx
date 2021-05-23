@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -25,19 +26,47 @@ const Play = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const formData = [
-            {"venue": venue},
-            {"bat_team": batTeam},
-            {"bowl_team": bowlTeam},
-            {"batsman": batsman},
-            {"bowler": bowler},
-            {"runs": runs},
-            {"wickets": wickets},
-            {"overs": overs},
-            {"striker": striker},
-            {"non_striker": nonStriker},
-        ];
+        // const formData = [
+        //     {"venue": venue},
+        //     {"bat_team": batTeam},
+        //     {"bowl_team": bowlTeam},
+        //     {"batsman": batsman},
+        //     {"bowler": bowler},
+        //     {"runs": runs},
+        //     {"wickets": wickets},
+        //     {"overs": overs},
+        //     {"striker": striker},
+        //     {"non_striker": nonStriker},
+        // ];
+        const formData = {
+            "venue": venue,
+            "bat_team": batTeam,
+            "bowl_team": bowlTeam,
+            "batsman": batsman,
+            "bowler": bowler,
+            "runs": runs,
+            "wickets": wickets,
+            "overs": overs,
+            "striker": striker,
+            "non_striker": nonStriker,
+        };
+        console.log(JSON.stringify(formData));
         console.log("Form Data: ", formData);
+        axios.post("http://127.0.0.1:8000/predict", {
+            headers: {
+                "Content-Type": "application/json",
+            },
+            data: JSON.stringify(formData),
+        })
+        .then((response) => {
+            return response.statusText();
+        })
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
     }
 
     return(

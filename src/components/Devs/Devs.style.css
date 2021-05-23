@@ -1,0 +1,15 @@
+.devs {
+    padding: 7% 0;
+}
+
+.list-group {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.item {
+    text-align: center;
+    width: 300%;
+}
