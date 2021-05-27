@@ -52,13 +52,10 @@ const Play = () => {
         };
         console.log(JSON.stringify(formData));
         console.log("Form Data: ", formData);
-        axios.post("http://127.0.0.1:8000/predict", {
-            headers: {
-                "Content-Type": "application/json",
-            },
-            data: JSON.stringify(formData),
-        })
+        axios.post("http://127.0.0.1:8000/predict",formData,
+        {headers: {"Content-Type": "application/json"}})
         .then((response) => {
+            console.log(response.data)
             return response.statusText();
         })
         .then((data) => {
@@ -124,7 +121,7 @@ const Play = () => {
                                                                 } }
                                         />
                                         <Form.Label htmlFor="runs" className="pt-3">Runs</Form.Label>
-                                        <Form.Control type="text"
+                                        <Form.Control 
                                                       placeholder="Runs"
                                                       onChange={ (e) => {
                                                                     e.preventDefault();
@@ -132,7 +129,7 @@ const Play = () => {
                                                                 } }
                                         />
                                         <Form.Label htmlFor="wickets" className="pt-3">Wickets</Form.Label>
-                                        <Form.Control type="text"
+                                        <Form.Control 
                                                       placeholder="Wickets"
                                                       onChange={ (e) => {
                                                                     e.preventDefault();
@@ -140,7 +137,7 @@ const Play = () => {
                                                                 } }
                                         />
                                         <Form.Label htmlFor="overs" className="pt-3">Overs</Form.Label>
-                                        <Form.Control type="text"
+                                        <Form.Control 
                                                       placeholder="Overs"
                                                       onChange={ (e) => {
                                                                     e.preventDefault();
@@ -148,7 +145,7 @@ const Play = () => {
                                                                 } }
                                         />
                                         <Form.Label htmlFor="striker" className="pt-3">Striker</Form.Label>
-                                        <Form.Control type="text"
+                                        <Form.Control 
                                                       placeholder="Striker"
                                                       onChange={ (e) => {
                                                                     e.preventDefault();
@@ -156,7 +153,7 @@ const Play = () => {
                                                                 } }
                                         />
                                         <Form.Label htmlFor="nonStriker" className="pt-3">Non-Striker</Form.Label>
-                                        <Form.Control type="text"
+                                        <Form.Control 
                                                       placeholder="Non-Striker"
                                                       onChange={ (e) => {
                                                                     e.preventDefault();
