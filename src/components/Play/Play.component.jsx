@@ -24,20 +24,11 @@ const Play = () => {
     const [striker, setStriker] = useState("");
     const [nonStriker, setNonStriker] = useState("");
 
+    var scores = [];
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        // const formData = [
-        //     {"venue": venue},
-        //     {"bat_team": batTeam},
-        //     {"bowl_team": bowlTeam},
-        //     {"batsman": batsman},
-        //     {"bowler": bowler},
-        //     {"runs": runs},
-        //     {"wickets": wickets},
-        //     {"overs": overs},
-        //     {"striker": striker},
-        //     {"non_striker": nonStriker},
-        // ];
+        
         const formData = {
             "venue": venue,
             "bat_team": batTeam,
@@ -50,20 +41,39 @@ const Play = () => {
             "striker": striker,
             "non_striker": nonStriker,
         };
-        console.log(JSON.stringify(formData));
-        console.log("Form Data: ", formData);
-        axios.post("http://127.0.0.1:8000/predict",formData,
-        {headers: {"Content-Type": "application/json"}})
+        
+        axios.post("http://127.0.0.1:8000/predict", formData, {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
         .then((response) => {
-            console.log(response.data)
-            return response.statusText();
+            // console.log(response.data)
+            return response.data;
         })
         .then((data) => {
-            console.log(data);
+            // console.log(data.Total_Score);
+            scores.push(data.Total_Score);
+            console.log("Player score: ", scores);
         })
         .catch((error) => {
             console.log(error);
-        })
+        });
+
+        clear();
+    }
+
+    const clear = () => {
+        setVenue("");
+        setBatTeam("");
+        setBowlTeam("");
+        setBatsman("");
+        setBowler("");
+        setRuns("");
+        setWickets("");
+        setOvers("");
+        setStriker("");
+        setNonStriker("");
     }
 
     return(
@@ -259,7 +269,7 @@ const Play = () => {
                                         />
                                     </Form.Group>
                                     <div className="submit-btn">
-                                        <Button variant="primary" onClick={ (e) => handleSubmit }>Submit!</Button>
+                                        <Button variant="primary" onClick={ (e) => handleSubmit(e) }>Submit!</Button>
                                     </div>
                                 </Form>
                             </Card.Body>
