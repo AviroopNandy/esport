@@ -1,0 +1,11 @@
+.works {
+    padding: 7% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    float: left;
+}

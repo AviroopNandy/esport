@@ -14,6 +14,10 @@ const NavBar = () => {
         history.push("/");
     }
 
+    const redirectToWorks = () => {
+        history.push("/working");
+    }
+
     const redirectToDevs = () => {
         history.push("/devs");
     }
@@ -27,8 +31,7 @@ const NavBar = () => {
                 </Navbar.Brand>
                 <Nav className="mr-auto">
                 <Nav.Link href="#" className="nav-link-text" onClick={ () => redirectToHome() }>Home</Nav.Link>
-                <Nav.Link href="#" className="nav-link-text">Stats</Nav.Link>
-                <Nav.Link href="#" className="nav-link-text">How It Works</Nav.Link>
+                <Nav.Link href="#" className="nav-link-text" onClick={ () => redirectToWorks() }>How It Works</Nav.Link>
                 <Nav.Link href="#" className="nav-link-text" onClick={ () => redirectToDevs() }>Devs</Nav.Link>
                 </Nav>
                 <Link to="/play">

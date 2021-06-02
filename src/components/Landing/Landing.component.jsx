@@ -12,7 +12,17 @@ const Landing = () => {
             <NavBar />
             <img src={ bg } alt="home background" className="bg" />
             <h3 className="header">Welcome to Esport</h3>
-            <p className="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos aliquid et maiores sit ad eius mollitia temporibus cupiditate voluptates veniam laboriosam quae modi animi tempora reprehenderit molestiae facere minima, aspernatur totam vero deserunt. Dolorem praesentium laudantium aspernatur mollitia? Magni, mollitia nam ut natus eaque odio, repudiandae qui saepe quidem voluptates earum nisi quis autem dolore fugiat quam veniam aut ipsam. Atque rem odio nam temporibus, sint explicabo pariatur et odit cumque voluptas harum possimus sed corporis quia, assumenda tenetur ex ullam eveniet, itaque eum hic aliquid culpa. Voluptates quibusdam eum ducimus perspiciatis eaque nam accusantium, commodi, doloribus, ut quidem odio?</p>
+            <p className="text">
+                Engage in a fun and interactive Cricket Simulator Game powered 
+                by Artificial Intelligence and Machine Learning.
+                <br />
+                Choose your favorite teams as well as players and set up the 
+                parameters of the game. You are in control!
+                <br />
+                Play against your opponent and find out the winner based on 
+                historical data present about previous interactions of the 
+                respective teams chosen.
+            </p>
             <Link to="/play">
                 <Button variant="primary">Play Now</Button>
             </Link>

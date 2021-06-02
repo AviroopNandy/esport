@@ -24,7 +24,7 @@ const Stats = () => {
             <Container>
                 <Row className="pt-2 pb-3 d-flex justify-content-around">
                     <Col className="d-flex flex-column text-center justify-content-center">
-                        <h4>Total vs Wickets in particular over</h4>
+                        <h4>Total Score vs Wickets</h4>
                         <img src={ wickets } className="image" alt="wickets" />
                     </Col>
                     <Col className="d-flex flex-column text-center justify-content-center">
@@ -34,7 +34,7 @@ const Stats = () => {
                 </Row>
                 <Row className="pt-3 pb-2 d-flex justify-content-around">
                     <Col className="d-flex flex-column text-center justify-content-center">
-                        <h4>Total vs Runs in particular over</h4>
+                        <h4>Total Score vs Runs in particular over</h4>
                         <img src={ runs } className="image" alt="wickets" />
                     </Col>
                     <Col className="d-flex flex-column text-center justify-content-center">
