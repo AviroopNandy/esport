@@ -1,0 +1,36 @@
+.result {
+    padding: 7% 0;
+    background: url("../../assets/result.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.progress {
+    position: absolute;
+    left: 25%;
+    text-align: center;
+    width: 50%;
+    height: 50px;
+    background: #d3d3d3;
+}
+
+.bar {
+    width: 1%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #ffffff;
+    background: #0275d8;
+}
+
+.winner {
+    padding: 7% 0;
+}
+
+.score {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

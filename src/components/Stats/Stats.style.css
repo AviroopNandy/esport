@@ -1,0 +1,10 @@
+.stats {
+    padding: 7% 0;
+    background: #282828;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+.image {
+    width: 100%;
+}
