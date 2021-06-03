@@ -1,11 +1,15 @@
 .works {
-    padding: 7% 0;
+    padding: 3.5% 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .image {
-    width: 100%;
-    float: left;
+    padding: 2% 2%;
+}
+
+.img {
+    width: 500px;
+    float: right;
 }

@@ -2,8 +2,6 @@ import React from "react";
 import NavBar from "../NavBar/NavBar.component";
 import image from "../../assets/how-it-works.png";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
 import "./HowItWorks.style.css";
 
@@ -12,9 +10,11 @@ const HowItWorks = () => {
         <div className="works">
             <NavBar />
             <Container>
-                <Row className="d-flex justify-content-around">
-                    <Col className="d-flex flex-column">
-                        <h2 className="pb-3 text-center"><strong>Powered by AI</strong></h2>
+                <div className="image">
+                    <img src={ image } className="img" alt="" />
+                </div>
+                <div className="desc">
+                    <h2 className="pb-3 text-center"><strong>Powered by AI</strong></h2>
                         <p>
                             "<strong>Esport</strong>" is powered by Machine Learning Technologies coupled with a simple 
                             and interactive UI. The Model is trained on previous match data and predicts the total score 
@@ -35,11 +35,7 @@ const HowItWorks = () => {
                             showed stats based on average runs scored by a team in an ODI game as well as Wickets taken 
                             over the course of 50 overs.
                         </p>
-                    </Col>
-                    <Col>
-                        <img src={ image } className="image" alt="" />
-                    </Col>
-                </Row>
+                </div>
             </Container>
         </div>
     );
