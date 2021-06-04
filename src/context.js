@@ -35,9 +35,11 @@ class QProvider extends React.Component {
                 player1Score: data.Total_Score
             });
             console.log("Player 1 Score in context.js: ", this.state.player1Score);
+            alert("Data submitted successfully!!!");
         })
         .catch((error) => {
             console.log(error);
+            alert("Data not submitted!!! ", error);
         });
     }
 
@@ -58,9 +60,11 @@ class QProvider extends React.Component {
                 player2Score: data.Total_Score
             });
             console.log("Player 2 Score in context.js: ", this.state.player2Score);
+            alert("Data submitted successfully!!!");
         })
         .catch((error) => {
             console.log(error);
+            alert("Data not submitted!!! ", error);
         });
     }
 
@@ -68,7 +72,7 @@ class QProvider extends React.Component {
         if(this.state.player1Score > this.state.player2Score) {
             const scoreDifference = Math.round(this.state.player1Score) - Math.round(this.state.player2Score);
             this.setState({
-                winner: "Player A",
+                winner: "Player 1",
                 wonByRuns: scoreDifference
             });
         }
@@ -76,7 +80,7 @@ class QProvider extends React.Component {
         else if(this.state.player2Score > this.state.player1Score) {
             const scoreDifference = Math.round(this.state.player2Score) - Math.round(this.state.player1Score);
             this.setState({
-                winner: "Player B",
+                winner: "Player 2",
                 wonByRuns: scoreDifference
             });
         }

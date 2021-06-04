@@ -74,12 +74,12 @@ const Result = () => {
                                                     <div className="score">
                                                         <Card>
                                                             <Card.Body>
-                                                                <h4>Player A Score: { Math.round(player1Score) }</h4>
+                                                                <h4>Player 1 Score: { Math.round(player1Score) }</h4>
                                                             </Card.Body>
                                                         </Card>
                                                         <Card>
                                                             <Card.Body>
-                                                                <h4>Player B Score: { Math.round(player2Score) }</h4>
+                                                                <h4>Player 2 Score: { Math.round(player2Score) }</h4>
                                                             </Card.Body>
                                                         </Card>
                                                     </div>

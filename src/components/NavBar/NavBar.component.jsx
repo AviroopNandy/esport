@@ -24,7 +24,7 @@ const NavBar = () => {
     return(
         <>
             <Navbar fixed="top" variant="primary" className="navbar-custom">
-                <Navbar.Brand href="#home" className="navbar-logo">
+                <Navbar.Brand href="/" className="navbar-logo">
                     <img src={ logo } alt="logo" />
                     ESPORT
                     {/* <h3 className="navbar-brand-text">ESPORTS</h3> */}
